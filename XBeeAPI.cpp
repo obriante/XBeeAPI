@@ -261,7 +261,7 @@ boolean recvZBRxResponse(){
 }
 
 boolean recvZBRxResponse(int timeout){
-	if(__recvAll(timeout)==1)
+	if(__recvAll(timeout,1))
 		return true;
 	else
 		return false;
