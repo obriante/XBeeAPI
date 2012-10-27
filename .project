@@ -27,14 +27,14 @@
 	</natures>
 	<linkedResources>
 		<link>
+			<name>ArduinoLibPath</name>
+			<type>2</type>
+			<locationURI>ArduinoLibPath</locationURI>
+		</link>
+		<link>
 			<name>SoftwareSerial</name>
 			<type>2</type>
 			<locationURI>ArduinoLibPath/SoftwareSerial</locationURI>
-		</link>
-		<link>
-			<name>XBee</name>
-			<type>2</type>
-			<locationURI>PivateLibPath/libraries/XBee</locationURI>
 		</link>
 		<link>
 			<name>arduino</name>
@@ -47,4 +47,10 @@
 			<locationURI>PinArduinoPath/standard</locationURI>
 		</link>
 	</linkedResources>
+	<variableList>
+		<variable>
+			<name>Private_LIB</name>
+			<value>file:/Development/sketchbook/libraries</value>
+		</variable>
+	</variableList>
 </projectDescription>

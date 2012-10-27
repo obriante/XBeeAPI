@@ -7,100 +7,6 @@
 XBee	xbee = XBee();
 SoftwareSerial	DSerial(9,10);
 
-
-void CoordinatorRX(int timeout){
-
-		switch(recvAll(timeout)){
-
-		case 0:
-			printApiID();
-			break;
-
-		case 1:
-			printZBRxResponse(getZBRxResponse());
-			DSerial.println(" ");
-			break;
-
-		case 2:
-			printZBTxStatusResponse(getZBTxStatusResponse());
-			DSerial.println(" ");
-			break;
-
-		case 3:
-			printModemStatusResponse(getModemStatusResponse());
-			DSerial.println(" ");
-			break;
-
-		case 4:
-			printRemoteAtCommandResponse(getRemoteAtCommandResponse());
-			DSerial.println(" ");
-			break;
-
-		case 5:
-			printZBRxIoSampleResponse(getZBRxIoSampleResponse());
-			DSerial.println(" ");
-			break;
-
-		case 6:
-			printAtCommandResponse(getAtCommandResponse());
-			DSerial.println(" ");
-			break;
-
-
-		default:
-			printApiID();
-			break;
-
-		}
-}
-
-void CoordinatorRX(){
-  
-		switch(recvAll()){
-
-		case 0:
-			printApiID();
-			break;
-
-		case 1:
-			printZBRxResponse(getZBRxResponse());
-			DSerial.println(" ");
-			break;
-
-		case 2:
-			printZBTxStatusResponse(getZBTxStatusResponse());
-			DSerial.println(" ");
-			break;
-
-		case 3:
-			printModemStatusResponse(getModemStatusResponse());
-			DSerial.println(" ");
-			break;
-
-		case 4:
-			printRemoteAtCommandResponse(getRemoteAtCommandResponse());
-			DSerial.println(" ");
-			break;
-
-		case 5:
-			printZBRxIoSampleResponse(getZBRxIoSampleResponse());
-			DSerial.println(" ");
-			break;
-
-		case 6:
-			printAtCommandResponse(getAtCommandResponse());
-			DSerial.println(" ");
-			break;
-
-
-		default:
-			printApiID();
-			break;
-
-		}
-}
-
-
 // MAIN
 
 XBeeAddress64	remoteAddress64_BRD = XBeeAddress64(0x00000000, 0x0000FFFF);
@@ -160,6 +66,5 @@ if(recvRemoteAtCommandResponse(3000)){
  DSerial.println(" "); 
 }
 
-//CoordinatorRX();  
 delay(1000);
 }
