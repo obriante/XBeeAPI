@@ -27,11 +27,6 @@
 	</natures>
 	<linkedResources>
 		<link>
-			<name>ArduinoLibPath</name>
-			<type>2</type>
-			<locationURI>ArduinoLibPath</locationURI>
-		</link>
-		<link>
 			<name>SoftwareSerial</name>
 			<type>2</type>
 			<locationURI>ArduinoLibPath/SoftwareSerial</locationURI>
