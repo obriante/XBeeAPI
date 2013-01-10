@@ -142,6 +142,10 @@ void printZBRxResponse(ZBRxResponse response){
 	uint8_t *rxData = response.getData();
 	int rxLength=response.getDataLength();
 
+	DSerial.print("Payload Length: ");
+	DSerial.println(rxLength);
+	DSerial.println(" ");
+
 	DSerial.print("Payload: ");
 
 	for(int i=0; i<=rxLength; i++)
