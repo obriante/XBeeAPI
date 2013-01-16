@@ -3,7 +3,7 @@
 ### Laboratory A.R.T.S. - University Mediterranea of Reggio Calabria - Faculty of Engineering
 ### Via Graziella Feo di Vito I - 89100 Reggio Calabria (RC), Italy
 
-### The arduino XBeeAPI library facilitate the management, of XBee Devices configured in API Mode
+### The arduino XBeeAPI library facilitate the management of XBee Devices configured in API Mode
 
 ## Requirements:
 
