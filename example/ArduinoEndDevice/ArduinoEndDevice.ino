@@ -1,7 +1,7 @@
 /*
  *
  * The arduino XBeeAPI library facilitate the management, of XBee Devices configured in API Mode
- * Copyright (C) 2013  Orazio Briante orazio.briante@unirc.it
+ * Copyright (C) 2013-2014  Orazio Briante orazio.briante@unirc.it
  * Laboratory A.R.T.S. - University Mediterranea of Reggio Calabria - Faculty of Engineering
  *
  * This library is free software; you can redistribute it and/or
@@ -137,7 +137,8 @@ void setup(){
 	DSerial.println(" ");
 	DSerial.println("Start");
 
-	xbee.begin(9600);
+	Serial.begin(9600)
+	xbee.begin(Serial);
 	DSerial.println("Waiting Message..");
 }
 
