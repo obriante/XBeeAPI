@@ -1,3 +1,4 @@
+
 /*
  *
  * The arduino XBeeAPI library facilitate the management, of XBee Devices configured in API Mode
@@ -24,11 +25,11 @@
 
 #include <XBee.h>
 
-void sendZBTxRequest(XBeeAddress64 remoteAddress64, uint8_t *payload, int length);
-void sendAtCommandRequest(uint8_t *cmd);
-void sendAtCommandRequest(uint8_t *cmd, uint8_t *value, int vlength);
-void sendRemoteAtCommandRequest(uint16_t remoteAddress16, uint8_t *cmd, uint8_t *value, int vlength);
-void sendRemoteAtCommandRequest(uint16_t remoteAddress16, uint8_t *cmd);
+void sendZBTxRequest(XBeeAddress64 remoteAddress64, uint8_t * payload, int length);
+void sendAtCommandRequest(uint8_t * cmd);
+void sendAtCommandRequest(uint8_t * cmd, uint8_t * value, int vlength);
+void sendRemoteAtCommandRequest(uint16_t remoteAddress16, uint8_t * cmd, uint8_t * value, int vlength);
+void sendRemoteAtCommandRequest(uint16_t remoteAddress16, uint8_t * cmd);
 
 /*
  * return:

@@ -1,3 +1,4 @@
+
 /*
  *
  * The arduino XBeeAPI library facilitate the management, of XBee Devices configured in API Mode
@@ -25,12 +26,12 @@
 #include <XBeeAPI.h>
 #include <XBeeAPIDebug.h>
 
-XBee	xbee = XBee();
-SoftwareSerial	DSerial(9,10);
+XBee xbee = XBee();
+SoftwareSerial DSerial(9, 10);
 
 
-XBeeAddress64	remoteAddress64_BRD = XBeeAddress64(0x00000000, 0x0000FFFF);
-uint8_t			msg[]={'I','\'','m',' ','E', 'n', 'd', ' ', 'D','e','v','i','c','e'};
+XBeeAddress64 remoteAddress64_BRD = XBeeAddress64(0x00000000, 0x0000FFFF);
+uint8_t msg[] = { 'I', '\'', 'm', ' ', 'E', 'n', 'd', ' ', 'D', 'e', 'v', 'i', 'c', 'e' };
 
 /*
 void CoordinatorRX(int timeout){
@@ -128,28 +129,32 @@ void CoordinatorRX(){
 */
 // MAIN
 
-//XBeeAddress64	remoteAddress64_BRD = XBeeAddress64(0x00000000, 0x0000FFFF);
-//uint8_t			msg[]={'I','\'','m',' ','E', 'n', 'd', ' ', 'D','e','v','i','c','e'};
+//XBeeAddress64 remoteAddress64_BRD = XBeeAddress64(0x00000000, 0x0000FFFF);
+//uint8_t                       msg[]={'I','\'','m',' ','E', 'n', 'd', ' ', 'D','e','v','i','c','e'};
 
-void setup(){
+void
+setup()
+{
 
-	DSerial.begin(9600);
-	DSerial.println(" ");
-	DSerial.println("Start");
+  DSerial.begin(9600);
+  DSerial.println(" ");
+  DSerial.println("Start");
 
-	Serial.begin(9600)
-	xbee.begin(Serial);
-	DSerial.println("Waiting Message..");
+  Serial.begin(9600)
+    xbee.begin(Serial);
+  DSerial.println("Waiting Message..");
 }
 
-void loop() {
+void
+loop()
+{
 
-if(recvZBRxResponse()){
-        printZBRxResponse(getZBRxResponse());
-	DSerial.println(" ");
-	sendZBTxRequest(remoteAddress64_BRD, msg, sizeof(msg));
-	DSerial.println("Response Sent.");
-	DSerial.println(" ");
-}
-		
+  if (recvZBRxResponse()) {
+    printZBRxResponse(getZBRxResponse());
+    DSerial.println(" ");
+    sendZBTxRequest(remoteAddress64_BRD, msg, sizeof(msg));
+    DSerial.println("Response Sent.");
+    DSerial.println(" ");
+  }
+
 }
