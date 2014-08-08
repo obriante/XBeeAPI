@@ -140,8 +140,8 @@ setup()
   DSerial.println(" ");
   DSerial.println("Start");
 
-  Serial.begin(9600)
-    xbee.begin(Serial);
+  Serial.begin(9600);
+  xbee.begin(Serial);
   DSerial.println("Waiting Message..");
 }
 
